@@ -2287,6 +2287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccdf747c72bd732499c72a23dcc0af4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cantidadAire: 0.3
   animator: {fileID: 905804524}
   nombreDeAnimacion: inflar
 --- !u!61 &905804527
@@ -3213,8 +3214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a450a7e317d69249baa49eea9e7e844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escalaGlobo: 15
   globoTransform: {fileID: 666349664}
+  velocidadResta: 0.5
 --- !u!4 &1334449696
 Transform:
   m_ObjectHideFlags: 0

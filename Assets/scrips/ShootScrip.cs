@@ -23,8 +23,9 @@ public class ShootScrip : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
 
-           shoot()
-        
+            shoot();
+
+
         }
 
     }

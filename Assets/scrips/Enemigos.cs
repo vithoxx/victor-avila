@@ -6,7 +6,7 @@ public class Enemigos : MonoBehaviour
 {
 
     public int hp;
-
+    public float aireDaño;
     public void Daño()
     {
         hp--;
@@ -21,5 +21,12 @@ public class Enemigos : MonoBehaviour
     {
         gamemanager.manager.DispararArma();
     }
+
+    public void QuitarVida()
+    {
+        ElGlobo.aire -= aireDaño;
+        gamemanager.manager.QuitarVida();
+    }
+
 
 }

@@ -12,7 +12,7 @@ public class gamemanager : MonoBehaviour
     public GameObject mensajeVictoria;
     public GameObject mensajeDerrota;
     public GameObject quitarvida;
-
+    public int hp;
 
     private void Awake()
     {
@@ -49,6 +49,16 @@ public class gamemanager : MonoBehaviour
     {
         animDisparo1.Play("disparo");
         animDisparo2.Play("disparo");
+    }
+
+    public void QuitarVida()
+    {
+        hp--;
+
+        if(hp < 1)
+        {
+            //Gameover
+        }
     }
 
 }

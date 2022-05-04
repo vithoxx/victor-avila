@@ -2405,53 +2405,6 @@ Transform:
   m_Father: {fileID: 1021979785}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1814804330 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3473197345949089834, guid: dfdb911551dfa394c936f4fe4e6cb2ea, type: 3}
-  m_PrefabInstance: {fileID: 3473197347015104052}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1814804332 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3473197345949089835, guid: dfdb911551dfa394c936f4fe4e6cb2ea, type: 3}
-  m_PrefabInstance: {fileID: 3473197347015104052}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814804330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a450a7e317d69249baa49eea9e7e844, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1814804333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814804330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c6a5da44e80bab4092e6b14639b69f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onEnter:
-  - tag: enemigo
-    eventos:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1814804332}
-          m_TargetAssemblyTypeName: ElGlobo, Assembly-CSharp
-          m_MethodName: "Da\xF1o"
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  onStay: []
-  onExit: []
 --- !u!1 &1816618077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2677,6 +2630,8 @@ MonoBehaviour:
   personajeAdentro: {fileID: 1619457062}
   mensajeVictoria: {fileID: 845683580}
   mensajeDerrota: {fileID: 847227639}
+  quitarvida: {fileID: 0}
+  hp: 10
 --- !u!4 &1929196614
 Transform:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - firepoint
   - globo
+  - enemigo
   layers:
   - Default
   - TransparentFX

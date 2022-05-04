@@ -11,6 +11,7 @@ public class gamemanager : MonoBehaviour
     public GameObject personajeAdentro;
     public GameObject mensajeVictoria;
     public GameObject mensajeDerrota;
+    public GameObject quitarvida;
 
 
     private void Awake()
@@ -20,9 +21,9 @@ public class gamemanager : MonoBehaviour
 
     public void GameOver() 
     {
+        
 
-
-        mensajeDerrota.SetActive(true);
+        mensajeDerrota.SetActive(false);
 
     }
 

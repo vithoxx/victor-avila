@@ -8,12 +8,13 @@ public class RamdonSpawner : MonoBehaviour
     public GameObject enemy;
     float randX;
     Vector2 whereToSpawn;
-    public float spawnRate = 2f;
+    public float spawnRate;
     float nextSpawn = 0.0f;
+    public float tiempomin, tiempomax;
     // Start is called before the first frame update
     void Start()
     {
-
+        nextSpawn = Random.Range(tiempomin, tiempomax);
     }
 
     // Update is called once per frame
@@ -21,10 +22,11 @@ public class RamdonSpawner : MonoBehaviour
     {
         if (Time.time > nextSpawn)
         {
+            spawnRate = Random.Range(tiempomin,tiempomax);
             nextSpawn = Time.time + spawnRate;
-            randX = Random.Range(-8.4f, 8.4f);
-            whereToSpawn = new Vector2(randX, transform.position.y);
-            Instantiate(enemy, whereToSpawn, Quaternion.identity);
+           // randX = Random.Range(minX, maxX);
+           // whereToSpawn = new Vector2(randX, transform.position.y);
+            Instantiate(enemy,transform.position,enemy.transform.rotation );
         }
     }
 }

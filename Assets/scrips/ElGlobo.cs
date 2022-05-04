@@ -7,7 +7,7 @@ public class ElGlobo : MonoBehaviour
     public static float aire = 15;
     public Transform globoTransform;
     public float velocidadResta;
-
+    public int lives = 3;
     public bool elGloboSeInflo;
 
 
@@ -44,6 +44,18 @@ public class ElGlobo : MonoBehaviour
         else
         {
             elGloboSeInflo = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            lives--;
+            if (lives <= 0)
+            {
+                gamemanager.manager.GameOver();
+            }
         }
     }
 

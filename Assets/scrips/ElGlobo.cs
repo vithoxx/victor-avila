@@ -9,13 +9,14 @@ public class ElGlobo : MonoBehaviour
     public float velocidadResta;
     public int lives = 3;
     public bool elGloboSeInflo;
+   
 
 
     private void Awake()
     {
         aire = 1;
     }
-    private void Update()
+    public void Update()
     {
 
         ChequearAire();
@@ -29,7 +30,16 @@ public class ElGlobo : MonoBehaviour
             globoTransform.localScale = Vector3.Lerp(globoTransform.localScale, nuevaEscalaGlobo * aire, Time.deltaTime * 5);
         }
 
-
+        if (lives <= 0)
+        {
+            if (GameObject.Find("MensajeDerrota"))
+            {
+                GameObject SPR = GameObject.Find("derrota");
+                SpriteRenderer Act = SPR.GetComponent<SpriteRenderer>();
+                Act.enabled = true;
+                lives = 0;
+            }
+        }
     }
 
 
@@ -47,16 +57,6 @@ public class ElGlobo : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Enemy")
-        {
-            lives--;
-            if (lives <= 0)
-            {
-                gamemanager.manager.GameOver();
-            }
-        }
-    }
+   
 
 }

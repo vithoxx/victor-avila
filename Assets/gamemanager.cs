@@ -10,7 +10,7 @@ public class gamemanager : MonoBehaviour
     public GameObject personajeAfuera;
     public GameObject personajeAdentro;
     public GameObject mensajeVictoria;
-    public GameObject mensajeDerrota;
+  
     public GameObject quitarvida;
     public int hp;
 
@@ -19,13 +19,7 @@ public class gamemanager : MonoBehaviour
         manager = this;
     }
 
-    public void GameOver() 
-    {
-        
-
-        mensajeDerrota.SetActive(false);
-
-    }
+    
 
     public void Wingame()
     {

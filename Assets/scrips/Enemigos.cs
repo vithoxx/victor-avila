@@ -26,6 +26,10 @@ public class Enemigos : MonoBehaviour
     {
         ElGlobo.aire -= aireDaño;
         gamemanager.manager.QuitarVida();
+
+        GameObject Obj = GameObject.Find("ElGlobo");
+        ElGlobo Globo = Obj.GetComponent<ElGlobo>();
+        Globo.lives--;
     }
 
 

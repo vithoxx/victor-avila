@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gamemanager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class gamemanager : MonoBehaviour
     public GameObject personajeAfuera;
     public GameObject personajeAdentro;
     public GameObject mensajeVictoria;
+
   
     public GameObject quitarvida;
     public int hp;
@@ -19,8 +21,14 @@ public class gamemanager : MonoBehaviour
         manager = this;
     }
 
-    
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
     public void Wingame()
     {
         // se cumplio la condicion de victoria
